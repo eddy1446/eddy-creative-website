@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
 
-/* =========================
-RESET
-========================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -29,10 +25,6 @@ text-decoration: none;
 button {
 font-family: inherit;
 }
-
-/* =========================
-VARIABLES
-========================= */
 
 :root {
 --black: #090909;
@@ -164,21 +156,6 @@ font-size: 0.7rem;
 margin-bottom: 80px;
 }
 
-.text-link {
-border-bottom: 1px solid #555;
-color: #aaa;
-display: inline-block;
-font-family: 'DM Mono', monospace;
-font-size: 0.7rem;
-padding-bottom: 8px;
-transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-.text-link:hover {
-border-color: var(--lime);
-color: var(--lime);
-}
-
 .primary-button {
 align-items: center;
 background: var(--lime);
@@ -197,7 +174,7 @@ transform: translateY(-5px);
 }
 
 /* =========================
-HOME HERO
+HOME PAGE
 ========================= */
 
 .hero {
@@ -288,10 +265,6 @@ position: absolute;
 right: 5vw;
 }
 
-/* =========================
-HOME INTRO
-========================= */
-
 .intro-section {
 background: var(--lime);
 color: var(--black);
@@ -322,11 +295,8 @@ line-height: 1.7;
 margin-bottom: 40px;
 }
 
-/* =========================
-HOME SERVICES
-========================= */
-
-.services-preview {
+.services-preview,
+.featured-work {
 padding: 160px 5vw;
 }
 
@@ -389,18 +359,10 @@ position: absolute;
 right: 25px;
 }
 
-/* =========================
-STATEMENT
-========================= */
-
 .statement-section {
 background: #eeeeea;
 color: var(--black);
 padding: 160px 5vw;
-}
-
-.statement-section .eyebrow {
-color: #555;
 }
 
 .statement-section h2 {
@@ -409,14 +371,6 @@ font-weight: 800;
 letter-spacing: -0.09em;
 line-height: 0.85;
 max-width: 1100px;
-}
-
-/* =========================
-FEATURED WORK
-========================= */
-
-.featured-work {
-padding: 160px 5vw;
 }
 
 .work-grid {
@@ -495,37 +449,42 @@ font-size: 0.65rem;
 }
 
 /* =========================
-SERVICES PAGE HERO
+SERVICES PAGE
 ========================= */
 
-.services-hero {
+.services-hero,
+.work-hero,
+.about-hero {
 min-height: 90vh;
 padding: 180px 5vw 100px;
 position: relative;
 }
 
-.services-hero h1 {
+.services-hero h1,
+.work-hero h1,
+.about-hero h1 {
 font-size: clamp(4rem, 12vw, 11rem);
 font-weight: 800;
 letter-spacing: -0.1em;
 line-height: 0.8;
 }
 
-.services-hero h1 span {
+.services-hero h1 span,
+.work-hero h1 span,
+.about-hero h1 span,
+.work-cta h2 span {
 color: var(--lime);
 }
 
-.services-intro {
+.services-intro,
+.page-intro,
+.about-intro {
 color: var(--muted);
 font-size: 0.95rem;
 line-height: 1.7;
-margin-top: 60px;
+margin-top: 55px;
 max-width: 480px;
 }
-
-/* =========================
-SERVICE DETAILS
-========================= */
 
 .services-list-section {
 background: #eeeeea;
@@ -607,10 +566,6 @@ transition: transform 0.3s ease;
 transform: translate(8px, -8px);
 }
 
-/* =========================
-PROCESS
-========================= */
-
 .process-section {
 padding: 160px 5vw;
 }
@@ -663,33 +618,131 @@ margin-top: 20px;
 }
 
 /* =========================
-WORK PAGE
+ABOUT PAGE
 ========================= */
 
-.work-hero {
-min-height: 90vh;
-padding: 180px 5vw 100px;
-position: relative;
+.about-story {
+background: var(--lime);
+color: var(--black);
+padding: 150px 5vw;
 }
 
-.work-hero h1 {
-font-size: clamp(4rem, 12vw, 11rem);
+.about-story-grid {
+display: grid;
+gap: 100px;
+grid-template-columns: 1.3fr 1fr;
+}
+
+.about-story-grid h2 {
+font-size: clamp(3rem, 7vw, 7rem);
 font-weight: 800;
-letter-spacing: -0.1em;
-line-height: 0.8;
+letter-spacing: -0.09em;
+line-height: 0.82;
 }
 
-.work-hero h1 span,
-.work-cta h2 span {
+.about-story-grid h2 span {
+color: #4b5d20;
+}
+
+.about-story-text {
+align-self: end;
+max-width: 500px;
+}
+
+.about-story-text p {
+font-size: 1rem;
+line-height: 1.8;
+margin-bottom: 25px;
+}
+
+.about-belief {
+background: #eeeeea;
+color: var(--black);
+padding: 160px 5vw;
+}
+
+.about-belief .eyebrow {
+color: #555;
+}
+
+.about-belief h2 {
+font-size: clamp(3rem, 7vw, 7rem);
+font-weight: 800;
+letter-spacing: -0.09em;
+line-height: 0.85;
+max-width: 1200px;
+}
+
+.about-belief h2 span {
+color: #777;
+}
+
+.values-section {
+padding: 160px 5vw;
+}
+
+.values-grid {
+border-top: 1px solid var(--line);
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+}
+
+.value-card {
+border-right: 1px solid var(--line);
+min-height: 300px;
+padding: 30px;
+}
+
+.value-card:first-child {
+border-left: 1px solid var(--line);
+}
+
+.value-card > span {
+color: var(--lime);
+font-family: 'DM Mono', monospace;
+font-size: 0.7rem;
+}
+
+.value-card h3 {
+font-size: 1.6rem;
+letter-spacing: -0.06em;
+margin-top: 80px;
+}
+
+.value-card p {
+color: var(--muted);
+font-size: 0.85rem;
+line-height: 1.7;
+margin-top: 20px;
+}
+
+.about-partner {
+background: #151515;
+padding: 160px 5vw;
+}
+
+.partner-content {
+max-width: 900px;
+}
+
+.partner-content h2 {
+font-size: clamp(3rem, 7vw, 7rem);
+font-weight: 800;
+letter-spacing: -0.09em;
+line-height: 0.85;
+margin-bottom: 55px;
+}
+
+.partner-content h2 span {
 color: var(--lime);
 }
 
-.page-intro {
+.partner-content > p:not(.eyebrow) {
 color: var(--muted);
-font-size: 0.95rem;
-line-height: 1.7;
-margin-top: 55px;
-max-width: 420px;
+font-size: 1rem;
+line-height: 1.8;
+margin-bottom: 45px;
+max-width: 550px;
 }
 
 /* =========================
@@ -741,21 +794,6 @@ color: var(--lime);
 }
 
 /* =========================
-REVEAL ANIMATIONS
-========================= */
-
-.reveal {
-opacity: 0;
-transform: translateY(30px);
-transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal.visible {
-opacity: 1;
-transform: translateY(0);
-}
-
-/* =========================
 RESPONSIVE
 ========================= */
 
@@ -769,17 +807,14 @@ display: none;
 display: flex;
 }
 
-.hero {
-min-height: 850px;
-}
-
 .hero-bottom {
 align-items: flex-start;
 flex-direction: column;
 gap: 30px;
 }
 
-.intro-content {
+.intro-content,
+.about-story-grid {
 gap: 60px;
 grid-template-columns: 1fr;
 }
@@ -806,19 +841,20 @@ flex-direction: column;
 gap: 40px;
 }
 
-.site-footer {
-align-items: flex-start;
-flex-direction: column;
-gap: 35px;
-}
-
 .service-detail {
 gap: 30px;
 grid-template-columns: 50px 1fr 50px;
 }
 
-.process-grid {
+.process-grid,
+.values-grid {
 grid-template-columns: 1fr 1fr;
+}
+
+.site-footer {
+align-items: flex-start;
+flex-direction: column;
+gap: 35px;
 }
 
 }
@@ -843,7 +879,11 @@ font-size: clamp(3.5rem, 16vw, 6rem);
 .statement-section,
 .cta-section,
 .work-cta,
-.process-section {
+.process-section,
+.about-story,
+.about-belief,
+.values-section,
+.about-partner {
 padding: 100px 6vw;
 }
 
@@ -866,18 +906,16 @@ border-top: none;
 min-height: 350px;
 }
 
-.site-footer {
-padding: 40px 6vw;
-}
-
 .services-hero,
-.work-hero {
+.work-hero,
+.about-hero {
 min-height: 800px;
 padding: 160px 6vw 80px;
 }
 
 .services-hero h1,
-.work-hero h1 {
+.work-hero h1,
+.about-hero h1 {
 font-size: clamp(3.5rem, 16vw, 6rem);
 }
 
@@ -909,20 +947,32 @@ margin-top: 35px;
 text-align: left;
 }
 
-.process-grid {
+.process-grid,
+.values-grid {
 grid-template-columns: 1fr;
 margin-top: 70px;
 }
 
 .process-step,
-.process-step:first-child {
+.value-card {
 border-left: 1px solid var(--line);
 border-right: 1px solid var(--line);
 border-bottom: 1px solid var(--line);
 }
 
-.process-step h3 {
+.process-step h3,
+.value-card h3 {
 margin-top: 45px;
+}
+
+.about-story-grid h2,
+.about-belief h2,
+.partner-content h2 {
+font-size: clamp(3rem, 15vw, 5rem);
+}
+
+.site-footer {
+padding: 40px 6vw;
 }
 
 }
