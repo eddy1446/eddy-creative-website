@@ -2,7 +2,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta
 name="description"
-content="Let's work together. Contact Eddy Creative Co. for branding, graphic design, photography, videography and digital experiences."
+content="Contact Eddy Creative Co. for branding, graphic design, photography, videography and digital experiences."
 />
 
   <title>Let's Talk — Eddy Creative Co.</title>  <link rel="stylesheet" href="style.css" />
@@ -58,7 +58,7 @@ content="Let's work together. Contact Eddy Creative Co. for branding, graphic de
   <div class="contact-grid">
 
 
-    <!-- CONTACT INFORMATION -->
+    <!-- CONTACT DETAILS -->
 
     <div class="contact-details">
 
@@ -80,22 +80,33 @@ content="Let's work together. Contact Eddy Creative Co. for branding, graphic de
       <div class="contact-links">
 
         <a href="mailto:eddyhope15@gmail.com">
+
           <span>Email</span>
+
           eddyhope15@gmail.com
+
         </a>
+
 
         <a
           href="https://wa.me/254704278052"
           target="_blank"
           rel="noopener"
         >
+
           <span>WhatsApp</span>
+
           +254 704 278 052
+
         </a>
 
+
         <a href="work.html">
+
           <span>Explore</span>
+
           View selected work ↗
+
         </a>
 
       </div>
@@ -107,19 +118,19 @@ content="Let's work together. Contact Eddy Creative Co. for branding, graphic de
 
     <form
       class="contact-form"
-      action="mailto:eddyhope15@gmail.com"
-      method="post"
-      enctype="text/plain"
+      id="contactForm"
     >
 
       <div class="form-group">
 
-        <label for="name">Your name</label>
+        <label for="name">
+          Your name
+        </label>
 
         <input
           type="text"
           id="name"
-          name="Name"
+          name="name"
           placeholder="What should I call you?"
           required
         />
@@ -129,12 +140,14 @@ content="Let's work together. Contact Eddy Creative Co. for branding, graphic de
 
       <div class="form-group">
 
-        <label for="email">Your email</label>
+        <label for="email">
+          Your email
+        </label>
 
         <input
           type="email"
           id="email"
-          name="Email"
+          name="email"
           placeholder="you@example.com"
           required
         />
@@ -144,9 +157,15 @@ content="Let's work together. Contact Eddy Creative Co. for branding, graphic de
 
       <div class="form-group">
 
-        <label for="service">What do you need?</label>
+        <label for="service">
+          What do you need?
+        </label>
 
-        <select id="service" name="Service">
+        <select
+          id="service"
+          name="service"
+          required
+        >
 
           <option value="">
             Select a service
@@ -183,11 +202,13 @@ content="Let's work together. Contact Eddy Creative Co. for branding, graphic de
 
       <div class="form-group">
 
-        <label for="message">Tell me about your project</label>
+        <label for="message">
+          Tell me about your project
+        </label>
 
         <textarea
           id="message"
-          name="Message"
+          name="message"
           placeholder="Tell me about your idea, project, or business..."
           required
         ></textarea>
@@ -199,9 +220,18 @@ content="Let's work together. Contact Eddy Creative Co. for branding, graphic de
         type="submit"
         class="primary-button form-submit"
       >
+
         Send enquiry
+
         <span>↗</span>
+
       </button>
+
+
+      <p
+        id="formStatus"
+        class="form-status"
+      ></p>
 
     </form>
 
@@ -227,7 +257,9 @@ content="Let's work together. Contact Eddy Creative Co. for branding, graphic de
 
   </main>  <!-- FOOTER -->  <footer class="site-footer"><div>
 
-  <strong>EDDY CREATIVE CO.</strong>
+  <strong>
+    EDDY CREATIVE CO.
+  </strong>
 
   <p>
     Creative work for ambitious ideas.
@@ -246,9 +278,7 @@ content="Let's work together. Contact Eddy Creative Co. for branding, graphic de
     WhatsApp
   </a>
 
-  <a
-    href="mailto:eddyhope15@gmail.com"
-  >
+  <a href="mailto:eddyhope15@gmail.com">
     Email
   </a>
 
@@ -268,7 +298,11 @@ content="Let's work together. Contact Eddy Creative Co. for branding, graphic de
   id="whatsappButton"
   aria-label="Chat with Eddy Creative Co. on WhatsApp"
 >
-  <span class="whatsapp-icon">✆</span>
+
+  <span class="whatsapp-icon">
+    ✆
+  </span>
+
 </button>
 
 
@@ -291,6 +325,7 @@ content="Let's work together. Contact Eddy Creative Co. for branding, graphic de
 
     </div>
 
+
     <button
       id="closeWhatsapp"
       aria-label="Close WhatsApp chat"
@@ -308,17 +343,24 @@ content="Let's work together. Contact Eddy Creative Co. for branding, graphic de
       How can I help you bring your idea to life?
     </p>
 
+
     <textarea
       id="whatsappMessage"
       placeholder="Write your message..."
     ></textarea>
 
+
     <button
       class="whatsapp-send"
       id="sendWhatsapp"
     >
+
       Open WhatsApp
-      <span>↗</span>
+
+      <span>
+        ↗
+      </span>
+
     </button>
 
   </div>
