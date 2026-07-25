@@ -222,3 +222,49 @@ window.open(
 });
 
 }
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
+
+if (contactForm) {
+
+  contactForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value;
+
+    const subject = `New Project Enquiry from ${name}`;
+
+    const body = `
+Hello Eddy Creative Co.,
+
+I have a new project enquiry.
+
+Name: ${name}
+
+Email: ${email}
+
+Service needed: ${service}
+
+Project details:
+${message}
+    `;
+
+    const mailtoLink =
+      `mailto:eddyhope15@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+
+    formStatus.textContent =
+      "Your email app is opening with your enquiry ready to send.";
+
+  });
+
+}
