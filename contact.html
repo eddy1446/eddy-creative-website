@@ -1,435 +1,288 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
- name="description"
- content="Contact Eddy Creative Co. for branding, graphic design, photography, videography and digital experiences."
-/>
+  <meta name="description" content="Start a project with Eddy Creative Co. Branding, graphic design, photography, videography and digital experiences.">
 
-  <title>Let's Talk — Eddy Creative Co.</title>
+  <title>Contact — Eddy Creative Co.</title>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
+<header class="site-header">
 
-  <header class="site-header">
-
-```
-<a href="index.html" class="logo">
-  <strong>EDDY</strong>
-  <span>CREATIVE CO.</span>
-</a>
-
-<nav class="desktop-nav">
-  <a href="services.html">Services</a>
-  <a href="work.html">Work</a>
-  <a href="about.html">About</a>
-  <a href="contact.html" class="nav-button">
-    Let's Talk ↗
+  <a href="index.html" class="logo">
+    <strong>EDDY</strong>
+    <span>CREATIVE CO.</span>
   </a>
-</nav>
 
-<button
-  class="menu-toggle"
-  aria-label="Open menu"
->
-  <span></span>
-  <span></span>
-</button>
-```
+  <nav class="desktop-nav">
+    <a href="services.html">Services</a>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="nav-button">Let's Talk ↗</a>
+  </nav>
 
-  </header>
+  <button class="menu-toggle" aria-label="Open menu">
+    <span></span>
+    <span></span>
+  </button>
 
-  <!-- MOBILE MENU -->
+</header>
 
-  <div class="mobile-menu">
+<div class="mobile-menu">
 
-```
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="work.html">Work</a>
-<a href="about.html">About</a>
-<a href="contact.html">Let's Talk ↗</a>
-```
+<a href="index.html">Home</a> <a href="services.html">Services</a> <a href="work.html">Work</a> <a href="about.html">About</a> <a href="contact.html">Let's Talk ↗</a>
 
-  </div>
+</div>
 
-  <main>
-
-```
-<!-- CONTACT HERO -->
+<main>
 
 <section class="contact-hero">
 
-  <p class="eyebrow">
-    Start something great
-  </p>
+  <p class="eyebrow">Start something</p>
 
   <h1>
-    LET'S<br />
-    MAKE IT<br />
-    <span>REAL.</span>
+    LET'S MAKE<br>
+    <span>IT REAL.</span>
   </h1>
 
-  <p class="contact-intro">
-    Have an idea, a project, or a business that needs to look better?
-    Let's talk about how we can bring it to life.
+  <p class="page-intro">
+    Have an idea, a project, or simply a question?
+    Tell me about it. I would love to hear what you are building.
   </p>
 
-  <div class="hero-number">
-    05 / 05
-  </div>
-
 </section>
-
-
-<!-- CONTACT SECTION -->
 
 <section class="contact-section">
 
-  <div class="contact-grid">
+  <div class="contact-info">
 
+```
+<p class="eyebrow">Get in touch</p>
 
-    <!-- CONTACT DETAILS -->
+<h2>
+  GOOD THINGS<br>
+  START WITH<br>
+  A <span>CONVERSATION.</span>
+</h2>
 
-    <div class="contact-details">
+<div class="contact-details">
 
-      <p class="eyebrow">
-        Get in touch
-      </p>
+  <a href="mailto:eddyhope15@gmail.com">
+    eddyhope15@gmail.com
+  </a>
 
-      <h2>
-        GOOD WORK<br />
-        STARTS WITH<br />
-        <span>A CONVERSATION.</span>
-      </h2>
+  <a href="https://wa.me/254704278052" target="_blank">
+    WhatsApp ↗
+  </a>
 
-      <p class="contact-description">
-        Whether you need a complete brand identity, a powerful campaign,
-        professional photography, or a digital experience, tell me what
-        you're building.
-      </p>
+</div>
+```
 
+  </div>
 
-      <div class="contact-links">
+  <div class="contact-form-wrapper">
 
-        <a href="mailto:eddyhope15@gmail.com">
+```
+<form id="contactForm">
 
-          <span>Email</span>
+  <div class="form-group">
 
-          eddyhope15@gmail.com
+    <label for="name">
+      YOUR NAME
+    </label>
 
-        </a>
-
-
-        <a
-          href="https://wa.me/254704278052"
-          target="_blank"
-          rel="noopener"
-        >
-
-          <span>WhatsApp</span>
-
-          +254 704 278 052
-
-        </a>
-
-
-        <a href="work.html">
-
-          <span>Explore</span>
-
-          View selected work ↗
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- CONTACT FORM -->
-
-    <form
-      class="contact-form"
-      id="contactForm"
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="John Doe"
+      required
     >
 
-      <div class="form-group">
-
-        <label for="name">
-          Your name
-        </label>
-
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="What should I call you?"
-          required
-        />
-
-      </div>
+  </div>
 
 
-      <div class="form-group">
+  <div class="form-group">
 
-        <label for="email">
-          Your email
-        </label>
+    <label for="email">
+      YOUR EMAIL
+    </label>
 
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="you@example.com"
-          required
-        />
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="you@example.com"
+      required
+    >
 
-      </div>
-
-
-      <div class="form-group">
-
-        <label for="service">
-          What do you need?
-        </label>
-
-        <select
-          id="service"
-          name="service"
-          required
-        >
-
-          <option value="">
-            Select a service
-          </option>
-
-          <option value="Brand Identity">
-            Brand Identity
-          </option>
-
-          <option value="Graphic Design">
-            Graphic Design
-          </option>
-
-          <option value="Photography">
-            Photography
-          </option>
-
-          <option value="Videography">
-            Videography
-          </option>
-
-          <option value="Website / Digital Experience">
-            Website / Digital Experience
-          </option>
-
-          <option value="Something else">
-            Something else
-          </option>
-
-        </select>
-
-      </div>
+  </div>
 
 
-      <div class="form-group">
+  <div class="form-group">
 
-        <label for="message">
-          Tell me about your project
-        </label>
+    <label for="service">
+      WHAT DO YOU NEED?
+    </label>
 
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Tell me about your idea, project, or business..."
-          required
-        ></textarea>
+    <select
+      id="service"
+      name="service"
+      required
+    >
 
-      </div>
+      <option value="">
+        Select a service
+      </option>
+
+      <option value="Brand Identity">
+        Brand Identity
+      </option>
+
+      <option value="Graphic Design">
+        Graphic Design
+      </option>
+
+      <option value="Photography">
+        Photography
+      </option>
+
+      <option value="Videography">
+        Videography
+      </option>
+
+      <option value="Website / Digital Experience">
+        Website / Digital Experience
+      </option>
+
+      <option value="Something Else">
+        Something Else
+      </option>
+
+    </select>
+
+  </div>
 
 
-      <button
-        type="submit"
-        class="primary-button form-submit"
-      >
+  <div class="form-group">
 
-        Send enquiry
+    <label for="message">
+      TELL ME ABOUT YOUR PROJECT
+    </label>
 
-        <span>↗</span>
+    <textarea
+      id="message"
+      name="message"
+      rows="6"
+      placeholder="Tell me about your idea, project, timeline and anything else I should know..."
+      required
+    ></textarea>
 
-      </button>
+  </div>
 
 
-      <p
-        id="formStatus"
-        class="form-status"
-      ></p>
+  <button
+    type="submit"
+    class="primary-button"
+  >
 
-    </form>
+    Send enquiry
+
+    <span>↗</span>
+
+  </button>
+
+
+  <p
+    id="formStatus"
+    class="form-status"
+  ></p>
+
+</form>
+```
 
   </div>
 
 </section>
 
-
-<!-- FINAL STATEMENT -->
-
-<section class="contact-final">
+<section class="work-cta">
 
   <p class="eyebrow">
-    Your idea deserves to be seen
+    Prefer a quick conversation?
   </p>
 
   <h2>
-    LET'S BUILD<br />
-    <span>SOMETHING GREAT.</span>
+    LET'S TALK<br>
+    <span>DIRECTLY.</span>
   </h2>
 
+<a
+href="https://wa.me/254704278052"
+target="_blank"
+class="primary-button"
+
+>
+
+```
+Message on WhatsApp
+
+<span>↗</span>
+```
+
+  </a>
+
 </section>
+
+</main>
+
+<footer class="site-footer">
+
+  <div>
+
 ```
-
-  </main>
-
-  <!-- FOOTER -->
-
-  <footer class="site-footer">
-
-```
-<div>
-
-  <strong>
-    EDDY CREATIVE CO.
-  </strong>
-
-  <p>
-    Creative work for ambitious ideas.
-  </p>
-
-</div>
-
-
-<div class="footer-links">
-
-  <a
-    href="https://wa.me/254704278052"
-    target="_blank"
-    rel="noopener"
-  >
-    WhatsApp
-  </a>
-
-  <a href="mailto:eddyhope15@gmail.com">
-    Email
-  </a>
-
-  <a href="contact.html">
-    Contact
-  </a>
-
-</div>
-
+<strong>
+  EDDY CREATIVE CO.
+</strong>
 
 <p>
-  © 2026 Eddy Creative Co.
+  Creative work for ambitious ideas.
 </p>
 ```
 
-  </footer>
+  </div>
 
-  <!-- WHATSAPP CHAT WIDGET -->
-
-  <div class="whatsapp-widget">
+  <div class="footer-links">
 
 ```
-<button
-  class="whatsapp-button"
-  id="whatsappButton"
-  aria-label="Open WhatsApp chat"
->
+<a href="#">
+  Instagram
+</a>
 
-  <span class="whatsapp-icon">
-    ✆
-  </span>
+<a href="#">
+  Facebook
+</a>
 
-</button>
-
-
-<div
-  class="whatsapp-chatbox"
-  id="whatsappChatbox"
->
-
-  <div class="whatsapp-chat-header">
-
-    <div>
-
-      <strong>
-        Eddy Creative Co.
-      </strong>
-
-      <span>
-        Usually replies quickly
-      </span>
-
-    </div>
-
-
-    <button
-      id="closeWhatsapp"
-      aria-label="Close WhatsApp chat"
-    >
-      ×
-    </button>
-
-  </div>
-
-
-  <div class="whatsapp-chat-body">
-
-    <p>
-      Hey 👋<br />
-      How can I help you bring your idea to life?
-    </p>
-
-
-    <textarea
-      id="whatsappMessage"
-      placeholder="Write your message..."
-    ></textarea>
-
-
-    <button
-      class="whatsapp-send"
-      id="sendWhatsapp"
-    >
-
-      Open WhatsApp
-
-      <span>
-        ↗
-      </span>
-
-    </button>
-
-  </div>
-
-</div>
+<a href="contact.html">
+  Contact
+</a>
 ```
 
   </div>
 
-  <script src="script.js"></script>
+  <p>
+    © 2026 Eddy Creative Co.
+  </p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
