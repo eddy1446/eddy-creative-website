@@ -9,27 +9,43 @@ if (menuToggle && mobileMenu) {
 
 menuToggle.addEventListener("click", () => {
 
-const isOpen = mobileMenu.classList.toggle("active");
+```
+const isOpen =
+  mobileMenu.classList.toggle("active");
 
-menuToggle.classList.toggle("active", isOpen);
+menuToggle.classList.toggle(
+  "active",
+  isOpen
+);
 
-document.body.style.overflow = isOpen ? "hidden" : "";
-
-});
-
-mobileMenu.querySelectorAll("a").forEach((link) => {
-
-link.addEventListener("click", () => {
-
-  mobileMenu.classList.remove("active");
-
-  menuToggle.classList.remove("active");
-
-  document.body.style.overflow = "";
+document.body.style.overflow =
+  isOpen ? "hidden" : "";
+```
 
 });
 
+mobileMenu
+.querySelectorAll("a")
+.forEach((link) => {
+
+```
+  link.addEventListener("click", () => {
+
+    mobileMenu.classList.remove(
+      "active"
+    );
+
+    menuToggle.classList.remove(
+      "active"
+    );
+
+    document.body.style.overflow =
+      "";
+
+  });
+
 });
+```
 
 }
 
@@ -37,41 +53,55 @@ link.addEventListener("click", () => {
 SCROLL REVEAL
 ===================================================== */
 
-const revealElements = document.querySelectorAll(
+const revealElements =
+document.querySelectorAll(
 ".service-card, .work-card, .intro-content, .section-heading"
 );
 
 if ("IntersectionObserver" in window) {
 
-const revealObserver = new IntersectionObserver(
+const revealObserver =
+new IntersectionObserver(
 
-(entries) => {
+```
+  (entries) => {
 
-  entries.forEach((entry) => {
+    entries.forEach((entry) => {
 
-    if (entry.isIntersecting) {
+      if (entry.isIntersecting) {
 
-      entry.target.classList.add("visible");
+        entry.target.classList.add(
+          "visible"
+        );
 
-      revealObserver.unobserve(entry.target);
+        revealObserver.unobserve(
+          entry.target
+        );
 
-    }
+      }
 
-  });
+    });
 
-},
+  },
 
-{
-  threshold: 0.12
-}
+  {
+    threshold: 0.12
+  }
 
 );
+```
 
 revealElements.forEach((element) => {
 
-element.classList.add("reveal");
+```
+element.classList.add(
+  "reveal"
+);
 
-revealObserver.observe(element);
+revealObserver.observe(
+  element
+);
+```
 
 });
 
@@ -81,22 +111,34 @@ revealObserver.observe(element);
 HERO PARALLAX
 ===================================================== */
 
-const hero = document.querySelector(".hero");
+const hero =
+document.querySelector(".hero");
 
 if (hero) {
 
-window.addEventListener("scroll", () => {
+window.addEventListener(
+"scroll",
+() => {
 
-const scrollPosition = window.scrollY;
+```
+  const scrollPosition =
+    window.scrollY;
 
-if (scrollPosition < window.innerHeight) {
 
-  hero.style.transform =
-    `translateY(${scrollPosition * 0.08}px)`;
+  if (
+    scrollPosition <
+    window.innerHeight
+  ) {
+
+    hero.style.transform =
+      `translateY(${scrollPosition * 0.08}px)`;
+
+  }
 
 }
+```
 
-});
+);
 
 }
 
@@ -105,50 +147,80 @@ PORTFOLIO FILTERS
 ===================================================== */
 
 const filterButtons =
-document.querySelectorAll(".filter-button");
+document.querySelectorAll(
+".filter-button"
+);
 
 const portfolioCards =
-document.querySelectorAll(".portfolio-card");
+document.querySelectorAll(
+".portfolio-card"
+);
 
-if (filterButtons.length && portfolioCards.length) {
+if (
+filterButtons.length &&
+portfolioCards.length
+) {
 
-filterButtons.forEach((button) => {
+filterButtons.forEach(
+(button) => {
 
-button.addEventListener("click", () => {
+```
+  button.addEventListener(
+    "click",
+    () => {
 
-  const filter = button.dataset.filter;
-
-
-  filterButtons.forEach((btn) => {
-
-    btn.classList.remove("active");
-
-  });
-
-
-  button.classList.add("active");
-
-
-  portfolioCards.forEach((card) => {
-
-    const category = card.dataset.category;
+      const filter =
+        button.dataset.filter;
 
 
-    if (filter === "all" || category === filter) {
+      filterButtons.forEach(
+        (btn) => {
 
-      card.style.display = "";
+          btn.classList.remove(
+            "active"
+          );
 
-    } else {
+        }
+      );
 
-      card.style.display = "none";
+
+      button.classList.add(
+        "active"
+      );
+
+
+      portfolioCards.forEach(
+        (card) => {
+
+          const category =
+            card.dataset.category;
+
+
+          if (
+            filter === "all" ||
+            category === filter
+          ) {
+
+            card.style.display =
+              "";
+
+          } else {
+
+            card.style.display =
+              "none";
+
+          }
+
+        }
+      );
 
     }
+  );
 
-  });
+}
+```
 
-});
-
-});
+);
 
 }
 
@@ -157,19 +229,29 @@ WHATSAPP CHAT WIDGET
 ===================================================== */
 
 const whatsappButton =
-document.getElementById("whatsappButton");
+document.getElementById(
+"whatsappButton"
+);
 
 const whatsappChatbox =
-document.getElementById("whatsappChatbox");
+document.getElementById(
+"whatsappChatbox"
+);
 
 const closeWhatsapp =
-document.getElementById("closeWhatsapp");
+document.getElementById(
+"closeWhatsapp"
+);
 
 const sendWhatsapp =
-document.getElementById("sendWhatsapp");
+document.getElementById(
+"sendWhatsapp"
+);
 
 const whatsappMessage =
-document.getElementById("whatsappMessage");
+document.getElementById(
+"whatsappMessage"
+);
 
 if (
 whatsappButton &&
@@ -179,92 +261,205 @@ sendWhatsapp &&
 whatsappMessage
 ) {
 
-whatsappButton.addEventListener("click", () => {
+whatsappButton.addEventListener(
+"click",
+() => {
 
-whatsappChatbox.classList.toggle("active");
-
-});
-
-closeWhatsapp.addEventListener("click", () => {
-
-whatsappChatbox.classList.remove("active");
-
-});
-
-sendWhatsapp.addEventListener("click", () => {
-
-const message =
-  whatsappMessage.value.trim();
-
-
-if (!message) {
-
-  whatsappMessage.focus();
-
-  return;
+```
+  whatsappChatbox.classList.toggle(
+    "active"
+  );
 
 }
+```
 
-
-const phoneNumber =
-  "254704278052";
-
-
-const whatsappURL =
-  `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-
-window.open(
-  whatsappURL,
-  "_blank"
 );
 
-});
+closeWhatsapp.addEventListener(
+"click",
+() => {
+
+```
+  whatsappChatbox.classList.remove(
+    "active"
+  );
 
 }
+```
+
+);
+
+sendWhatsapp.addEventListener(
+"click",
+() => {
+
+```
+  const message =
+    whatsappMessage.value.trim();
+
+
+  if (!message) {
+
+    whatsappMessage.focus();
+
+    return;
+
+  }
+
+
+  const phoneNumber =
+    "254704278052";
+
+
+  const whatsappURL =
+    `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+
+  window.open(
+    whatsappURL,
+    "_blank"
+  );
+
+}
+```
+
+);
+
+}
+
 /* =====================================================
-   CONTACT FORM
+CONTACT FORM
 ===================================================== */
 
-const contactForm = document.getElementById("contactForm");
-const formStatus = document.getElementById("formStatus");
+const contactForm =
+document.getElementById(
+"contactForm"
+);
+
+const formStatus =
+document.getElementById(
+"formStatus"
+);
 
 if (contactForm) {
 
-  contactForm.addEventListener("submit", function (event) {
+contactForm.addEventListener(
+"submit",
+async (event) => {
 
-    event.preventDefault();
+```
+  event.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const service = document.getElementById("service").value;
-    const message = document.getElementById("message").value;
 
-    const subject = `New Project Enquiry from ${name}`;
+  const submitButton =
+    contactForm.querySelector(
+      "button[type='submit']"
+    );
 
-    const body = `
-Hello Eddy Creative Co.,
 
-I have a new project enquiry.
+  const name =
+    document.getElementById(
+      "name"
+    ).value;
 
-Name: ${name}
+  const email =
+    document.getElementById(
+      "email"
+    ).value;
 
-Email: ${email}
+  const service =
+    document.getElementById(
+      "service"
+    ).value;
 
-Service needed: ${service}
+  const message =
+    document.getElementById(
+      "message"
+    ).value;
 
-Project details:
-${message}
-    `;
 
-    const mailtoLink =
-      `mailto:eddyhope15@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  submitButton.disabled =
+    true;
 
-    window.location.href = mailtoLink;
+
+  submitButton.innerHTML =
+    "Sending... <span>↗</span>";
+
+
+  formStatus.textContent =
+    "Sending your enquiry...";
+
+
+  try {
+
+    const response =
+      await fetch(
+        "/api/contact",
+        {
+
+          method: "POST",
+
+          headers: {
+            "Content-Type":
+              "application/json"
+          },
+
+          body: JSON.stringify({
+
+            name,
+            email,
+            service,
+            message
+
+          })
+
+        }
+      );
+
+
+    const data =
+      await response.json();
+
+
+    if (!response.ok) {
+
+      throw new Error(
+        data.message ||
+        "Something went wrong."
+      );
+
+    }
+
 
     formStatus.textContent =
-      "Your email app is opening with your enquiry ready to send.";
+      "Thank you! Your enquiry has been received.";
 
-  });
+
+    contactForm.reset();
+
+
+    submitButton.innerHTML =
+      "Enquiry sent ✓ <span>↗</span>";
+
+
+  } catch (error) {
+
+    formStatus.textContent =
+      "Something went wrong. Please try WhatsApp instead.";
+
+
+    submitButton.disabled =
+      false;
+
+
+    submitButton.innerHTML =
+      "Send enquiry <span>↗</span>";
+
+  }
+
+}
+```
+
+);
 
 }
