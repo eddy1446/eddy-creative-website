@@ -90,7 +90,7 @@
   <div class="contact-form-wrapper">
 
 ```
-<form id="contactForm">
+<form id="contactForm" novalidate>
 
   <div class="form-group">
 
@@ -191,6 +191,7 @@
   <button
     type="submit"
     class="primary-button"
+    id="submitButton"
   >
 
     Send enquiry
@@ -282,7 +283,124 @@ Message on WhatsApp
 
 </footer>
 
-<script src="script.js"></script>
+<script>
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    const form = event.target;
+
+    const submitButton =
+      document.getElementById("submitButton");
+
+    const formStatus =
+      document.getElementById("formStatus");
+
+    const name =
+      document.getElementById("name").value.trim();
+
+    const email =
+      document.getElementById("email").value.trim();
+
+    const service =
+      document.getElementById("service").value;
+
+    const message =
+      document.getElementById("message").value.trim();
+
+
+    if (!name || !email || !service || !message) {
+
+      formStatus.textContent =
+        "Please fill in all the fields.";
+
+      return;
+
+    }
+
+
+    submitButton.disabled = true;
+
+    submitButton.innerHTML =
+      "Sending... <span>↗</span>";
+
+    formStatus.textContent =
+      "Sending your enquiry...";
+
+
+    try {
+
+      const response = await fetch(
+        "/api/contact",
+        {
+
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json"
+          },
+
+          body: JSON.stringify({
+
+            name: name,
+            email: email,
+            service: service,
+            message: message
+
+          })
+
+        }
+      );
+
+
+      const data =
+        await response.json();
+
+
+      if (!response.ok) {
+
+        throw new Error(
+          data.message ||
+          "Something went wrong."
+        );
+
+      }
+
+
+      form.reset();
+
+
+      formStatus.textContent =
+        "Your enquiry has been sent successfully!";
+
+
+      submitButton.innerHTML =
+        "Enquiry sent ✓ <span>↗</span>";
+
+
+    } catch (error) {
+
+      console.error(error);
+
+
+      formStatus.textContent =
+        "Something went wrong. Please try WhatsApp instead.";
+
+
+      submitButton.disabled = false;
+
+
+      submitButton.innerHTML =
+        "Send enquiry <span>↗</span>";
+
+    }
+
+  });
+
+</script>
 
 </body>
 </html>
